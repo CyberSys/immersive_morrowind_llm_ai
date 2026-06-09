@@ -754,7 +754,7 @@ function this.get_npc_data(ref_id)
     end
 
     local travel_destinations = nil
-    if npc.aiConfig.travelDestinations ~= nil then
+    if npc ~= nil and npc.aiConfig.travelDestinations ~= nil then
         travel_destinations = {}
         for _, d in pairs(npc.aiConfig.travelDestinations) do
             table.insert(travel_destinations, d.cell.name)
